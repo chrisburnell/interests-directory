@@ -1,0 +1,14 @@
+{
+  "name": "interests-directory",
+  "version": "0.0.1",
+  "description": "A directory of /interests pages.",
+  "author": "Chris Burnell <me@chrisburnell.com>",
+  "homepage": "https://chrisburnell.github.io/interests-directory",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:chrisburnell/interests-directory.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chrisburnell/interests-directory/issues"
+  }
+}

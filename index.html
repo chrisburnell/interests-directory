@@ -1,0 +1,41 @@
+---
+title: Interests Directory
+---
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+		<title>{{ page.title }}</title>
+		<style></style>
+		<link rel="stylesheet" href="/css/styles.css">
+		<link rel="icon" href="/favicon.ico">
+		<link rel="canonical" href="{{ site.data.site.url }}">
+		<meta name="description" content="{{ page.description }}">
+		<meta name="theme-color" content="{{ site.data.site.color }}">
+		<meta name="color-scheme" content="light dark">
+	</head>
+	<body>
+		<header>
+			<h1>{{ page.title }}</h1>
+		</header>
+		<main>
+			<ul class=" [ people-list ] ">
+			{% for person in site.people %}
+				<li>
+					<img src="https://v1.indieweb-avatar.11ty.dev/{{ person.page | url_encode }}/" class=" [ avatar ] " width="48" height="48" loading="lazy" decoding="async">
+					<a href="{{ person.page }}" rel="external noopener">{{ person.name }} · {{ person.page }}</a>
+				</li>
+			{% endfor %}
+			</ul>
+			<hr>
+			<p>To add your own file, go to this page URL and add a new file with the following YAML content:</p>
+			<pre><code>---
+name: Jane Doe
+page: https://example.com/interests
+---</code></pre>
+		</main>
+		<footer>
+		</footer>
+	</body>
+</html>

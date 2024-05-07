@@ -1,0 +1,7 @@
+collections:
+  people:
+    sort_by: name
+
+sass:
+  sass_dir: css
+  style: compressed
