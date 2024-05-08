@@ -1,5 +1,6 @@
 ---
 title: Interests Directory
+description: A directory of /interests pages.
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -7,7 +8,6 @@ title: Interests Directory
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 		<title>{{ page.title }}</title>
-		<style></style>
 		<link rel="stylesheet" href="/css/styles.css">
 		<link rel="icon" href="/favicon.ico">
 		<link rel="canonical" href="{{ site.data.site.url }}">
@@ -19,23 +19,60 @@ title: Interests Directory
 		<header>
 			<h1>{{ page.title }}</h1>
 		</header>
-		<main>
-			<ul class=" [ people-list ] ">
+		<main class=" [ flow ] ">
+			<h2 id="what">What is an <q>/interests page</q>?</h2>
+			<p>Similar to the <a href="https://nownownow.com/about" rel="external noopener">nownownow.com</a> and <a href="https://aboutideasnow.com/about" rel="external noopener">About Ideas Now</a> initiatives, an <code>/interests</code> page is a place on your website where you can write about whatever you’re passionate about!</p>
+			<p>The purpose of this project is to help folks across the web find people with similar interests, learn more about the people behind your favourite websites, and find new rabbit holes to dive into!</p>
+
+			<hr>
+
+			<h2 id="directory">Directory</h2>
+			<ul class=" [ people-list ] " role="list">
 			{% for person in site.people %}
 				<li>
-					<img src="https://v1.indieweb-avatar.11ty.dev/{{ person.page | url_encode }}/" class=" [ avatar ] " width="48" height="48" loading="lazy" decoding="async">
-					<a href="{{ person.page }}" rel="external noopener">{{ person.name }} · {{ person.page }}</a>
+					<img class=" [ image ] " src="https://v1.indieweb-avatar.11ty.dev/{{ person.page | url_encode }}/" width="96" height="96" loading="lazy" decoding="async">
+					<span class=" [ name ] ">{{ person.name }}</span>
+					<a class=" [ page ] " href="{{ person.page }}" rel="external noopener">{{ person.page }}</a>
 				</li>
 			{% endfor %}
+				<li>
+					<span class=" [ image ] ">❓</span>
+					<a class=" [ cta ] " href="#add">Add your name here?</a>
+				</li>
 			</ul>
+
 			<hr>
-			<p>To add your own file, go to this page URL and add a new file with the following YAML content:</p>
-			<pre><code>---
+
+			<h2 id="add">Add your /interests page</h2>
+			<p>If you have an account on <a href="https://github.com" rel="external noopener">GitHub</a>, please follow the steps below.</p>
+			<p><strong>If not</strong>, feel free to <a href="https://chrisburnell.com/about/#contact" rel="external noopener">reach out to me</a> and let me know what <em>name</em> you would like to have appear in the list <strong>and</strong> the <abbr title="uniform resource locator">URL</abbr> of your <code>/interests</code> page.</p>
+			<ol class=" [ flow ] ">
+				<li class=" [ flow ] ">
+					<p>Create a new file in the <em>_people</em> directory in the GitHub repository by clicking <q>Add file</q> → <q>Create new file</q>:<br><a href="https://github.com/chrisburnell/interests-directory/tree/main/_people" rel="external noopener">https://github.com/chrisburnell/interests-directory/tree/main/_people</a></p>
+				</li>
+				<li class=" [ flow ] ">
+					<p>Add the following as the contents of the file, replacing the <em>name</em> and <em>page</em> values with your own:</p>
+					<pre><code tabindex="0">---
 name: Jane Doe
 page: https://example.com/interests
 ---</code></pre>
+				</li>
+				<li class=" [ flow ] ">
+					<p>Save the file as a Markdown file with the <code>.md</code> file extension.</p>
+				</li>
+				<li>
+					<p>GitHub will prompt you to <em>fork</em> the repository under your own user so that a <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request" rel="external noopener">Pull Request</a> can be made.</p>
+				</li>
+				<li>
+					<p>I (Chris Burnell) will review submissions as quickly as I am able, and when your <em>Pull Request</em> is merged, your website will appear in the list above!</p>
+				</li>
+			</ol>
+			<p>If you want an example of how this file looks with real user data, you can look at the source code of any of the files there, e.g. <a href="https://github.com/chrisburnell/interests-directory/blob/main/_people/chrisburnell.md" rel="external noopener">this one</a>.</p>
+
+			<hr>
+
+			<h2 id="who">Who built this?</h2>
+			<p>This idea was first proposed by with the post <a href="https://chrisburnell.com/note/slash-interests/" rel="external noopener"><q>What are you interested in?</q></a> on <time datetime="2024-05-01T19:37:12+08:00">1 May 2024</time>.</p>
 		</main>
-		<footer>
-		</footer>
 	</body>
 </html>

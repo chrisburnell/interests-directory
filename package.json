@@ -10,5 +10,9 @@
   },
   "bugs": {
     "url": "https://github.com/chrisburnell/interests-directory/issues"
+  },
+  "scripts": {
+    "start": "bundle exec jekyll serve",
+    "build": "bundle exec jekyll build"
   }
 }

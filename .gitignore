@@ -30,5 +30,10 @@ Thumbs.db
 # Lockfiles
 *.lock
 
+# Jekyll
+.jekyll-cache
+.jekyll-metadata
+_site/
+
 # Git Config
 .gitconfig
