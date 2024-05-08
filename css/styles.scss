@@ -40,7 +40,15 @@ body {
 	padding-inline: 1em;
 }
 header {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	align-items: center;
+	gap: 2rem;
 	padding-block: 3rem;
+
+	img {
+		image-rendering: pixelated;
+	}
 }
 main {
 	padding-block-end: 3rem;
@@ -50,7 +58,6 @@ main {
 }
 h1 {
 	font-size: var(--font-size-3);
-	text-align: center;
 }
 h2 {
 	font-size: var(--font-size-2);

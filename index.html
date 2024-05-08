@@ -17,6 +17,7 @@ description: A directory of /interests pages.
 	</head>
 	<body>
 		<header>
+			<img src="logo.png" alt="" width="128" height="128" loading="lazy" decoding="async" role="presentation">
 			<h1>{{ page.title }}</h1>
 		</header>
 		<main class=" [ flow ] ">
@@ -30,7 +31,7 @@ description: A directory of /interests pages.
 			<ul class=" [ people-list ] " role="list">
 			{% for person in site.people %}
 				<li>
-					<img class=" [ image ] " src="https://v1.indieweb-avatar.11ty.dev/{{ person.page | url_encode }}/" width="96" height="96" loading="lazy" decoding="async">
+					<img class=" [ image ] " src="https://v1.indieweb-avatar.11ty.dev/{{ person.page | url_encode }}/" alt="" width="96" height="96" loading="lazy" decoding="async" role="presentation">
 					<span class=" [ name ] ">{{ person.name }}</span>
 					<a class=" [ page ] " href="{{ person.page }}" rel="external noopener">{{ person.page }}</a>
 				</li>
