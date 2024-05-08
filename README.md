@@ -1,5 +1,7 @@
 # Interests Directory
 
+[**Go to the Directory →**](https://chrisburnell.github.io/interests-directory/)
+
 ## What is an "/interests page"?
 
 Similar to the [nownownow.com](https://nownownow.com/about) and [About Ideas Now](https://nownownow.com/about) initiatives, an `/interests` page is a place on your website where you can write about whatever you’re passionate about!
