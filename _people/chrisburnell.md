@@ -1,4 +1,4 @@
 ---
 name: Chris Burnell
-page: https://chrisburnell.com/interests
+page: https://chrisburnell.com/interests/
 ---
