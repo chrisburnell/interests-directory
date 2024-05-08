@@ -116,17 +116,32 @@ pre {
 code {
 	font-size: 0.85em;
 }
+:is(ol, ul) {
+	padding-inline-start: 1em;
+
+	li {
+		padding-inline-start: 1em;
+
+		&::marker {
+			font-weight: bold;
+		}
+	}
+}
 ol {
-	padding-left: 1em;
 	counter-reset: ordered-list;
 
 	li {
-		padding-left: 1em;
 		counter-increment: ordered-list;
 
 		&::marker {
 			content: counter(ordered-list) ".";
-			font-weight: bold;
+		}
+	}
+}
+ul {
+	li {
+		&::marker {
+			content: "·";
 		}
 	}
 }
