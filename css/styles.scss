@@ -34,17 +34,19 @@ body {
 		color: var(--color-light);
 	}
 }
-:is(header, main) {
+:is(header, main, footer) {
 	max-inline-size: 800px;
 	margin-inline: auto;
 	padding-inline: 1em;
+}
+:is(header, footer) {
+	padding-block: 3rem;
 }
 header {
 	display: grid;
 	grid-template-columns: auto 1fr;
 	align-items: center;
 	gap: 2rem;
-	padding-block: 3rem;
 
 	img {
 		image-rendering: pixelated;
@@ -52,6 +54,15 @@ header {
 }
 main {
 	padding-block-end: 3rem;
+}
+footer {
+	margin-block-start: 3rem;
+	border-block-start: 2px solid currentColor;
+	text-align: center;
+
+	p {
+		max-inline-size: initial;
+	}
 }
 .flow > * + * {
 	margin-block-start: 1em;
@@ -89,6 +100,29 @@ a {
 		color: var(--color-anchor-light);
 	}
 }
+:is(abbr, dfn) {
+	font-style: italic;
+	text-decoration: underline;
+	text-decoration-style: dotted;
+}
+blockquote {
+	inline-size: fit-content;
+	background-color: color-mix(in oklab, black, transparent 90%);
+	padding: 1em;
+	border-radius: 2px;
+
+	p::before {
+		content: open-quote;
+	}
+
+	p:not(:last-of-type)::after {
+		opacity: 0;
+	}
+
+	p::after {
+		content: close-quote;
+	}
+}
 hr {
 	background-color: currentColor;
 	inline-size: 100%;
@@ -101,9 +135,16 @@ hr {
 }
 pre {
 	background-color: color-mix(in oklab, black, transparent 90%);
-	padding: 1em;
+	max-inline-size: clamp(21em, 100vi, 30em);
+	border-radius: 2px;
 
 	code {
+		display: block;
+		padding: 1em;
+		white-space: pre-wrap;
+		word-break: normal;
+		word-spacing: normal;
+		word-wrap: normal;
 		font-size: 1rem;
 		user-select: all;
 
@@ -152,6 +193,11 @@ ul {
 		}
 	}
 }
+svg {
+	max-inline-size: 0.85em;
+	max-block-size: 0.85em;
+	fill: currentColor;
+}
 .people-list {
 	list-style: "";
 	display: grid;
@@ -188,6 +234,18 @@ ul {
 			grid-column: name / page;
 		}
 	}
+}
+:where(.visually-hidden:not(:focus, :focus-within, :active)) {
+	inline-size: 1px !important;
+	block-size: 1px !important;
+	padding: 0 !important;
+	margin: -1px !important;
+	border: 0 !important;
+	overflow: hidden !important;
+	position: absolute !important;
+	white-space: nowrap !important;
+	clip: rect(0 0 0 0) !important;
+	clip-path: inset(100%) !important;
 }
 ::selection {
 	background-color: var(--color-maple);

@@ -22,8 +22,11 @@ description: A directory of /interests pages.
 		</header>
 		<main class=" [ flow ] ">
 			<h2 id="what">What is an <q>/interests page</q>?</h2>
-			<p>Similar to the <a href="https://nownownow.com/about" rel="external noopener">nownownow.com</a> and <a href="https://aboutideasnow.com/about" rel="external noopener">About Ideas Now</a> initiatives, an <code>/interests</code> page is a place on your website where you can write about whatever you’re passionate about!</p>
-			<p>The purpose of this project is to help folks across the web find people with similar interests, learn more about the people behind your favourite websites, and find new rabbit holes to dive into!</p>
+			<blockquote class=" [ flow ] ">
+				<p>This page is, in essence, a place for website authors to list out things they’re passionate about and expound on what it is about those things that excites them. This builds on the idea of what makes clubs, groups, collectives, meetups, conferences, etc. so appealing. There is very little so stimulating as listening to someone eagerly talk about the things that they’re enthusiastic and knowledgable about!</p>
+				<p>The hope is that our <code style="white-space: nowrap;">/interests</code> pages can act as a clarion call for others to hear, creating the spark for avid and spirited conversation about topics close to our hearts that we might not have otherwise known were shared.</p>
+			</blockquote>
+			<p>This idea was first proposed as an addition to the <a href="https://nownownow.com/about" rel="external noopener">nownownow.com</a> and <a href="https://aboutideasnow.com/about" rel="external noopener">About Ideas Now</a> initiatives with the post <a href="https://chrisburnell.com/note/slash-interests/" rel="external noopener"><q>What are you interested in?</q></a> by <a href="https://chrisburnell.com/" rel="external noopener">Chris Burnell</a> on <time datetime="2024-05-01T19:37:12+08:00">1 May 2024</time>.</p>
 
 			<hr>
 
@@ -46,16 +49,19 @@ description: A directory of /interests pages.
 
 			<h2 id="add">Add your /interests page</h2>
 			<p>If you have an account on <a href="https://github.com" rel="external noopener">GitHub</a>, please follow the steps below.</p>
-			<p><strong>If not</strong>, feel free to <a href="https://chrisburnell.com/about/#contact" rel="external noopener">reach out to me</a> and let me know what <em>name</em> you would like to have appear in the list <strong>and</strong> the <abbr title="uniform resource locator">URL</abbr> of your <code>/interests</code> page.</p>
+			<p><strong>If not</strong>, or if you run into any issues, feel free to <a href="https://chrisburnell.com/about/#contact" rel="external noopener">reach out to me</a> and let me know what <em>name</em> you would like to have appear in the list <strong>and</strong> the <abbr title="uniform resource locator">URL</abbr> of your <code style="white-space: nowrap;">/interests</code> page.</p>
 			<ol class=" [ flow ] ">
 				<li class=" [ flow ] ">
-					<p>Create a new file in the <em>_people</em> directory in the GitHub repository by clicking <q>Add file</q> → <q>Create new file</q>:<br><a href="https://github.com/chrisburnell/interests-directory/tree/main/_people" rel="external noopener">https://github.com/chrisburnell/interests-directory/tree/main/_people</a></p>
-				</li>
-				<li>
-					<p>GitHub will prompt you to <em>fork</em> the repository under your own user so that a <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request" rel="external noopener">Pull Request</a> can be made.</p>
+					<p>Create a new file in the <em>_people</em> directory in the GitHub repository by clicking <q>Add file</q> → <q>Create new file</q>:</p>
+					<p><a href="https://github.com/chrisburnell/interests-directory/tree/main/_people" rel="external noopener">https://github.com/chrisburnell/interests-directory/tree/main/_people</a></p>
 				</li>
 				<li class=" [ flow ] ">
-					<p>Name the file with some variation of your name/website as a Markdown file with the <code>.md</code> file extension.<br><em>e.g.</em> <q><code>janedoe.md</code></q></p>
+					<p>GitHub will prompt you to <em>fork</em> the repository under your own user so that a <dfn title="a request to merge changes from one branch or fork of a repository into another">Pull Request</dfn> can be made.</p>
+					<p><a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request" rel="external noopener">Learn more about Pull Requests.</a></p>
+				</li>
+				<li class=" [ flow ] ">
+					<p>Name the file with some variation of your name/website as a Markdown file with the <code>.md</code> file extension.</p>
+					<p><em>e.g.</em> <q><code>janedoe.md</code></q></p>
 				</li>
 				<li class=" [ flow ] ">
 					<p>Add the following as the contents of the file, replacing the <strong>name</strong> and <strong>page</strong> values with your own:</p>
@@ -65,7 +71,8 @@ page: https://example.com/interests
 ---</code></pre>
 				</li>
 				<li class=" [ flow ] ">
-					<p>Commit the file, and if you’d be so kind, set the <em>Commit Message</em> to something that helps me understand what your commit is doing.<br><em>e.g.</em> <q><code>add: Jane Doe to the directory</code></q></p>
+					<p>Commit the file, and if you’d be so kind, set the <em>Commit Message</em> to something that helps me understand what your commit is doing.</p>
+					<p><em>e.g.</em> <q><code>add: Jane Doe to the directory</code></q></p>
 				</li>
 				<li class=" [ flow ] ">
 					<p>GitHub will then prompt you to create a <em>Pull Request</em> against the original repository. Do so, and you’re all set!</p>
@@ -74,19 +81,11 @@ page: https://example.com/interests
 					<p>Submissions will be reviewed as quickly as possible, and when your <em>Pull Request</em> is merged, your website will appear in the <a href="#directory">directory</a> above!</p>
 				</li>
 			</ol>
-			<p>If you want an example of how this file looks with real user data, you can look at the source code of any of the files in the <code>_people</code> directory.<br><em>e.g.</em> <a href="https://github.com/chrisburnell/interests-directory/blob/main/_people/chrisburnell.md" rel="external noopener">this file</a></p>
-
-			<hr>
-
-			<h2 id="origins">Origins</h2>
-			<p>This idea was first proposed by with the post <a href="https://chrisburnell.com/note/slash-interests/" rel="external noopener"><q>What are you interested in?</q></a> on <time datetime="2024-05-01T19:37:12+08:00">1 May 2024</time> by <a href="https://chrisburnell.com/" rel="external noopener">Chris Burnell</a>.</p>
-
-			<hr>
-
-			<h2 id="contributors">Contributors</h2>
-			<ul>
-				<li><a href="https://chrisburnell.com/" rel="external noopener">Chris Burnell</a></li>
-			</ul>
+			<p>If you want an example of how this file looks with real user data, you can look at the source code of any of the files in the <code>_people</code> directory, <em>e.g.</em> <a href="https://github.com/chrisburnell/interests-directory/blob/main/_people/chrisburnell.md" rel="external noopener">in this file</a>.</p>
 		</main>
+		<footer class=" [ flow ] ">
+			<p style="font-size: var(--font-size-1);">Maintained and built with <span class=" [ visually-hidden ] ">love</span> <span aria-hidden="true" style="user-select: none;">&#9829;</span> by <a href="https://chrisburnell.com/" rel="external noopener">Chris Burnell</a>.</p>
+			<p>You can view the source code <a href="https://github.com/chrisburnell/interests-directory/" rel="external noopener">on GitHub</a>.</p>
+		</footer>
 	</body>
 </html>
