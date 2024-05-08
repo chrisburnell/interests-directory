@@ -172,11 +172,14 @@ ol {
 	color: var(--color-light);
 }
 :target {
-		animation: 2s ease target;
-	}
-	@keyframes target {
-		0%, 33% {
-			background-color: var(--color-aspen);
-			color: var(--color-dark);
+	animation: 2s ease target;
+
+	@at-root {
+		@keyframes target {
+			0%, 33% {
+				background-color: var(--color-aspen);
+				color: var(--color-dark);
+			}
 		}
+	}
 }
