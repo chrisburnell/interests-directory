@@ -104,7 +104,7 @@ pre {
 	padding: 1em;
 
 	code {
-		font-size: var(--font-size-1);
+		font-size: 1rem;
 		user-select: all;
 
 		&:focus {
@@ -113,7 +113,7 @@ pre {
 			@at-root {
 				@keyframes selectall {
 					to {
-					user-select: text;
+						user-select: text;
 					}
 				}
 			}
