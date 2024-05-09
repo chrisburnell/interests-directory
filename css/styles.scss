@@ -23,6 +23,48 @@
 	font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
 	line-height: 1.5;
 }
+@media (prefers-reduced-motion: no-preference) {
+	:where(html:focus-within) {
+		scroll-behavior: smooth;
+	}
+}
+@supports not (min-block-size: 100dvb) {
+	:where(html) {
+		block-size: 100%;
+	}
+}
+:where(body) {
+	inline-size: 100%;
+	min-block-size: 100vb;
+	min-block-size: 100dvb;
+	-webkit-font-smoothing: antialiased;
+}
+:where(:focus-visible, :target) {
+	scroll-margin-block: max(8vb, 1rem);
+}
+:where(.visually-hidden:not(:focus, :focus-within, :active)) {
+	inline-size: 1px !important;
+	block-size: 1px !important;
+	padding: 0 !important;
+	margin: -1px !important;
+	border: 0 !important;
+	overflow: hidden !important;
+	position: absolute !important;
+	white-space: nowrap !important;
+	clip: rect(0 0 0 0) !important;
+	clip-path: inset(100%) !important;
+}
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		background-attachment: initial !important;
+		animation-delay: 0s !important;
+		animation-duration: 0s !important;
+		animation-iteration-count: 1 !important;
+		transition: none !important;
+	}
+}
 body {
 	background-color: var(--color-light);
 	color: var(--color-dark);
@@ -237,18 +279,6 @@ svg {
 			grid-column: name / page;
 		}
 	}
-}
-:where(.visually-hidden:not(:focus, :focus-within, :active)) {
-	inline-size: 1px !important;
-	block-size: 1px !important;
-	padding: 0 !important;
-	margin: -1px !important;
-	border: 0 !important;
-	overflow: hidden !important;
-	position: absolute !important;
-	white-space: nowrap !important;
-	clip: rect(0 0 0 0) !important;
-	clip-path: inset(100%) !important;
 }
 ::selection {
 	background-color: var(--color-maple);
