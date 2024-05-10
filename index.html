@@ -32,7 +32,8 @@ description: A directory of /interests pages.
 
 			<h2 id="directory">Directory</h2>
 			<ul class=" [ people-list ] " role="list">
-			{% for person in site.people %}
+			{% assign people_sorted = site.people | sort_natural: 'name' %}
+			{% for person in people_sorted %}
 				<li>
 					<img class=" [ image ] " src="https://v1.indieweb-avatar.11ty.dev/{{ person.page | url_encode }}/" alt="" width="96" height="96" loading="lazy" decoding="async" role="presentation">
 					<span class=" [ name ] ">{{ person.name }}</span>
