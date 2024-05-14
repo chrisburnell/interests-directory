@@ -40,9 +40,17 @@ page: https://example.com/interests
 5. Commit the file, and if you’d be so kind, set the *Commit Message* to something that helps me understand what your commit is doing.
 
 	*e.g.* `add: Jane Doe to the directory`
- 
+
 6. GitHub will then prompt you to create a *Pull Request* against the original repository. Do so, and you’re all set!
 
 7. Submissions will be reviewed as quickly as possible, and when your *Pull Request* is merged, your website will appear in the [directory](https://chrisburnell.github.io/interests-directory/#directory)!
 
 If you want an example of how this file looks with real user data, you can look at the source code of any of the files in the `_people` directory, *e.g.* [in this file](https://github.com/chrisburnell/interests-directory/blob/main/_people/chrisburnell.md).
+
+## Remove your /interests page
+
+If, for any reason, you wish to remove your `/interests` page from the directory, you can follow the above steps, but instead of *Creating* a new file, *Delete* your respective file.
+
+Only Pull Requests made by the same GitHub user that originally *added* the file will be merged, i.e. please do not request deletions on behalf of someone else.
+
+If you want a maintainer to do this for you, please [get in touch](https://chrisburnell.com/about/#contact) and you’ll be asked to provide proof that you are the owner of the page before it’s removed from the directory.
